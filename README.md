@@ -10,6 +10,8 @@ This project will be an introduction to cyber security.
 | level01 | x24ti5gi3x0ol2eh4esiuxias |
 | flag01  | abcdefg                   |
 | level02 | f2av5il02puano7naaf6adaaf |
+| flag02  | ft_waNDReL0L              |
+| level03 | kooda2puivaav1idi4f57q8iq |
 
 ## Script
 
@@ -36,7 +38,7 @@ flag00@SnowCrash:~$ cat /etc/passwd | grep flag01
 flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
 ```
 
-Using **john the ripper** I was able to find corresponding password.
+Using ``john the ripper`` I was able to find corresponding password.
 
 ```bash
 user@hostname:~$ echo "42hDRfypTqqnw" > /tmp/password-file && john /tmp/password-file && john -show /tmp/password-file
@@ -45,3 +47,7 @@ No password hashes left to crack (see FAQ)
 ?:abcdefg
 1 password hash cracked, 0 left
 ```
+
+### level02
+
+Open ``level02.pcap`` in wireshark then Statistics -> Conversations -> Tab TCP -> Follow Stream
