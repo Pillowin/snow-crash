@@ -78,4 +78,5 @@ Check flag.Here is your token : ne2searoevaevoem4ov4ar8ap
 echo "getflag > /tmp/log" > /opt/openarenaserver/foo
 sleep 120
 cat /tmp/foo
+Check flag.Here is your token : viuaaale9huek52boumoomioc
 ```
