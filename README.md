@@ -19,6 +19,8 @@ This project will be an introduction to cyber security.
 | level08 | fiumuikeil55xe9cu4dood66h |
 | flag08  | fiumuikeil55xe9cu4dood66h |
 | level09 | 25749xKZ8L7DkSCwJkT9dyv6f |
+| flag09  | f3iji1ju5yuevaus41q1afiuq |
+| level10 | s5cAJpM8ev6XHw998pRWG728z |
 
 ## Script
 
@@ -110,4 +112,28 @@ Password:
 Don't forget to launch getflag !
 flag08@SnowCrash:~$ getflag
 Check flag.Here is your token : 25749xKZ8L7DkSCwJkT9dyv6f
+```
+
+### level09
+
+```bash
+level09@SnowCrash:~$ echo '#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    int passwd[26] = { 102,  52, 107, 109, 109,  54, 112, 124,  61, 130, 127, 112, 130, 110, 131, 130, 68,  66, 131,  68, 117, 123, 127, 140, 137,  10 };
+
+    for (int i = 0; i < 26; i++)
+        printf("%c", (passwd[i] - i >= 20) ? passwd[i] - i : 20);
+    printf("\n");
+    return (EXIT_SUCCESS);
+}' > main.c && gcc -std=gnu99 main.c && ./a.out
+f3iji1ju5yuevaus41q1afiuq
+```
+```
+level09@SnowCrash:~$ su flag09
+Password:
+Don't forget to launch getflag !
+flag09@SnowCrash:~$ getflag
+Check flag.Here is your token : s5cAJpM8ev6XHw998pRWG728z
 ```
