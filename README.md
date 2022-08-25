@@ -17,6 +17,8 @@ This project will be an introduction to cyber security.
 | level06 | viuaaale9huek52boumoomioc |
 | level07 | wiok45aaoguiboiki2tuin6ub |
 | level08 | fiumuikeil55xe9cu4dood66h |
+| flag08  | fiumuikeil55xe9cu4dood66h |
+| level09 | 25749xKZ8L7DkSCwJkT9dyv6f |
 
 ## Script
 
@@ -97,4 +99,15 @@ Check flag x Here is your token : wiok45aaoguiboiki2tuin6ub
 ```bash
 level07@SnowCrash:~$ LOGNAME='`getflag`' ./level07
 Check flag.Here is your token : fiumuikeil55xe9cu4dood66h
+```
+### level08
+
+```
+level08@SnowCrash:~$ mv token toto && ./level08 toto
+quif5eloekouj29ke0vouxean
+level08@SnowCrash:~$ su flag08
+Password:
+Don't forget to launch getflag !
+flag08@SnowCrash:~$ getflag
+Check flag.Here is your token : 25749xKZ8L7DkSCwJkT9dyv6f
 ```
