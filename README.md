@@ -17,7 +17,7 @@ This project will be an introduction to cyber security.
 | level06 | viuaaale9huek52boumoomioc |
 | level07 | wiok45aaoguiboiki2tuin6ub |
 | level08 | fiumuikeil55xe9cu4dood66h |
-| flag08  | fiumuikeil55xe9cu4dood66h |
+| flag08  | quif5eloekouj29ke0vouxean |
 | level09 | 25749xKZ8L7DkSCwJkT9dyv6f |
 | flag09  | f3iji1ju5yuevaus41q1afiuq |
 | level10 | s5cAJpM8ev6XHw998pRWG728z |
