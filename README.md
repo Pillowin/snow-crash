@@ -3,29 +3,30 @@ This project will be an introduction to cyber security.
 
 ## Passwords
 
-| User    | Password                  |
-| :-----: |:-------------------------:|
-| level00 | level00                   |
-| flag00  | nottoohardhere            |
-| level01 | x24ti5gi3x0ol2eh4esiuxias |
-| flag01  | abcdefg                   |
-| level02 | f2av5il02puano7naaf6adaaf |
-| flag02  | ft_waNDReL0L              |
-| level03 | kooda2puivaav1idi4f57q8iq |
-| level04 | qi0maab88jeaj46qoumi7maus |
-| level05 | ne2searoevaevoem4ov4ar8ap |
-| level06 | viuaaale9huek52boumoomioc |
-| level07 | wiok45aaoguiboiki2tuin6ub |
-| level08 | fiumuikeil55xe9cu4dood66h |
-| flag08  | quif5eloekouj29ke0vouxean |
-| level09 | 25749xKZ8L7DkSCwJkT9dyv6f |
-| flag09  | f3iji1ju5yuevaus41q1afiuq |
-| level10 | s5cAJpM8ev6XHw998pRWG728z |
-| flag10  | woupa2yuojeeaaed06riuj63c |
-| level11 | feulo4b72j7edeahuete3no7c |
-| level12 | fa6v5ateaw21peobuub8ipe6s |
-| level13 | g1qKMiRpXf53AWhDaU7FEkczr |
-| level14 | 2A31L79asukciNyi8uppkEuSx |
+| User    | Password                               |
+| :-----: |:--------------------------------------:|
+| level00 | level00                                |
+| flag00  | nottoohardhere                         |
+| level01 | x24ti5gi3x0ol2eh4esiuxias              |
+| flag01  | abcdefg                                |
+| level02 | f2av5il02puano7naaf6adaaf              |
+| flag02  | ft_waNDReL0L                           |
+| level03 | kooda2puivaav1idi4f57q8iq              |
+| level04 | qi0maab88jeaj46qoumi7maus              |
+| level05 | ne2searoevaevoem4ov4ar8ap              |
+| level06 | viuaaale9huek52boumoomioc              |
+| level07 | wiok45aaoguiboiki2tuin6ub              |
+| level08 | fiumuikeil55xe9cu4dood66h              |
+| flag08  | quif5eloekouj29ke0vouxean              |
+| level09 | 25749xKZ8L7DkSCwJkT9dyv6f              |
+| flag09  | f3iji1ju5yuevaus41q1afiuq              |
+| level10 | s5cAJpM8ev6XHw998pRWG728z              |
+| flag10  | woupa2yuojeeaaed06riuj63c              |
+| level11 | feulo4b72j7edeahuete3no7c              |
+| level12 | fa6v5ateaw21peobuub8ipe6s              |
+| level13 | g1qKMiRpXf53AWhDaU7FEkczr              |
+| level14 | 2A31L79asukciNyi8uppkEuSx              |
+| flag14 | 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ |
 
 ## Script
 
@@ -200,4 +201,38 @@ eax            0x1092   4242
 Continuing.
 your token is 2A31L79asukciNyi8uppkEuSx
 [Inferior 1 (process 1956) exited with code 050]
+```
+
+### level14
+
+```bash
+level14@SnowCrash:~$ gdb /bin/getflag
+(gdb) b getuid
+Breakpoint 1 at 0x80484b0
+(gdb) b ptrace
+Breakpoint 2 at 0x8048540
+(gdb) r
+Starting program: /bin/getflag
+Breakpoint 2, 0xb7f146d0 in ptrace () from /lib/i386-linux-gnu/libc.so.6
+(gdb) n
+Single stepping until exit from function ptrace,
+which has no line number information.
+0x0804898e in main ()
+(gdb) set $eax=42
+(gdb) c
+Continuing.
+Breakpoint 1, 0xb7ee4cc0 in getuid () from /lib/i386-linux-gnu/libc.so.6
+(gdb) n
+Single stepping until exit from function getuid,
+which has no line number information.
+0x08048b02 in main ()
+(gdb) si
+0x08048b06 in main ()
+(gdb) si
+0x08048b0a in main ()
+(gdb) set $eax=3014
+(gdb) c
+Continuing.
+Check flag.Here is your token : 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
+[Inferior 1 (process 2134) exited normally]
 ```
